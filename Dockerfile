@@ -27,7 +27,9 @@ COPY files/run.sh /usr/local/bin/
 ENV DONATE_LEVEL="0"
 ENV PROXY_URL=""
 ENV SERVER_URL="stratum+tls://gulf.moneroocean.stream:20128"
+ENV NICENESS_ADJUSTMENT="19"
 ENV PASSWORD=""
+ENV SCHED_POLICY="idle"
 ENV WALLET_ADDRESS=\
 "8BxBCFFvjozLXKVrn75xUijajMtyvMaNrHsRQEAARkpeYTacwG9NLwpAaM9Q6hfFaK4TSJKxfpL5AgJ9VNDmGjbB7BDmBa1"
 

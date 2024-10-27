@@ -14,6 +14,7 @@ if [[ -n "$WORKER_ID" ]]; then
     ADDITIONAL_ARGUMENTS+=("--rig-id" "$WORKER_ID")
 fi
 
-
+SCHED_POLICY="${SCHED_POLICY#SCHED_}"
+exec chrt --"${SCHED_POLICY,,}" 0 nice --adjustment "$NICENESS_ADJUSTMENT" \
 xmrig "${ADDITIONAL_ARGUMENTS[@]}" --donate-level "$DONATE_LEVEL" --url "${SERVER_URL#*://}" \
     --user "$WALLET_ADDRESS" --pass "$PASSWORD" "$@"

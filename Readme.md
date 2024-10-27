@@ -21,8 +21,12 @@ Run the container in privileged mode to allow automatic MSR register configurati
     -   Run network communication through specified proxy.
 -   `SERVER_URL`
     -   Url of the mining server, default: `stratum+tls://gulf.moneroocean.stream:20128`.
+-   `NICENESS_ADJUSTMENT`
+    -   Set a custom niceness adjustment, default `19`.
 -   `PASSWORD`
     -   Password for mining server.
+-   `SCHED_POLICY`
+    -   Set the specified scheduling policy, default `idle`.
 -   `WALLET_ADDRESS`
     -   Username for mining server, defaults to donation wallet.
 
